@@ -1,5 +1,5 @@
 :root {
-  --header-height: 6rem;
+  --header-height: 8rem;
 
   // colors
   --body-color: hsl(0, 0%, 100%);
@@ -24,6 +24,9 @@
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
+
+  --z-fixed: 100;
+  --z-tooltip: 10;
 }
 
 @include breakpoint-up(large) {
