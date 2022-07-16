@@ -12,18 +12,12 @@ const handleMenuToggleAnimation = () => {
 
 const handleMenuListClick = event => {
   const clickedElement = event.target
+  const isALink = clickedElement.tagName === 'A'
+  const notHasNavClassClosest = !clickedElement.closest('.nav')
 
-  if (clickedElement.tagName === 'A') {
+  if ( isALink || notHasNavClassClosest) {
     menu.classList.remove('show-menu')  
     menuToggle.classList.remove('active')
-  }
-}
-
-const handleOutsideMenuClick = event => {
-  const clickedElement = event.target
-  
-  if (!clickedElement.closest('.nav')) {
-    menu.classList.remove('show-menu')
   }
 }
 
@@ -37,6 +31,6 @@ const showMenu = () => {
   }
 }
 
-window.addEventListener('click', handleOutsideMenuClick)
+window.addEventListener('click', handleMenuListClick)
 menuList.addEventListener('click', handleMenuListClick)
 menuToggle.addEventListener('click', showMenu)
