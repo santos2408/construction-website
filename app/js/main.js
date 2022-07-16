@@ -1,3 +1,4 @@
+const header = document.querySelector('[data-js="header"]')
 const menu = document.querySelector('[data-js="nav-menu"]')
 const menuToggle = document.querySelector('[data-js="menu-open"]')
 const menuList = document.querySelector('[data-js="menu-list"]')
@@ -30,6 +31,17 @@ const showMenu = () => {
     menu.classList.add('show-menu')
   }
 }
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 40) {
+    header.classList.add('header-scroll')
+    menu.classList.remove('show-menu')
+    menuToggle.classList.remove('active')
+    return
+  }
+
+  header.classList.remove('header-scroll')
+})
 
 window.addEventListener('click', handleMenuListClick)
 menuList.addEventListener('click', handleMenuListClick)
