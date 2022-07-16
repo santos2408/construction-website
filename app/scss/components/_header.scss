@@ -1,0 +1,96 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+
+  .nav {
+    height: var(--header-height);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: var(--font-semibold);
+      text-transform: uppercase;
+      color: var(--first-color);
+    }
+
+    .nav__menu {
+      visibility: none;
+      position: absolute;
+      width: calc(100% - 2.4rem);
+      top: -350px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      
+      margin-top: calc(var(--header-height) + 1rem);
+      padding: 2.5rem;
+      border-radius: 10px;
+      background-color: var(--white-color);
+      box-shadow: 0px 5px 10px 2px hsla(0, 0%, 20%, 0.085);
+      transition: .35s ease-out;
+
+      .menu__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+
+        .menu__link {
+          color: var(--text-color);
+          padding: 5px;
+          transition: .3s;
+
+          &:hover {
+            color: var(--first-color);
+          }
+        }
+      }
+    }
+
+    // open nav menu when clicked
+    .nav__menu.show-menu {
+      visibility: visible;
+      top: 0;
+    }
+  
+    .menu__open {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      padding: 10px 0;
+      cursor: pointer;
+      
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--title-color);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      &.active {
+        .line:nth-child(2) {
+          opacity: 0;
+        }
+  
+        .line:nth-child(1) {
+          @include transform(-45, translate(3px, 8px));
+        }
+  
+        .line:nth-child(3) {
+          @include transform(45, translate(3px, -8px));
+        }
+      }
+    }
+  }
+}
