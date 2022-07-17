@@ -18,13 +18,13 @@
 
 <body>
   <!--=========== HEADER ===========-->
-  <header class="header">
+  <header class="header" data-js="header" id="header">
     <nav class="nav container">
       <a href="/" class="logo">Construction</a>
 
       <div class="nav__menu" data-js="nav-menu">
         <ul class="menu__list" data-js="menu-list">
-          <li><a href="#home" class="menu__link">Home</a></li>
+          <li><a href="#" class="menu__link">Home</a></li>
           <li><a href="#about" class="menu__link">About Us</a></li>
           <li><a href="#service" class="menu__link">Services</a></li>
           <li><a href="#contact" class="menu__link">Contact</a></li>
@@ -38,6 +38,40 @@
       </div>
     </nav>
   </header>
+
+  <!--=========== HERO ===========-->
+  <section class="hero section">
+    <div class="hero__container container grid">
+      <div class="hero__data">
+        <h1 class="hero__title"><span>Masters</span> of Consistency and <span>Quality</span></h1>
+        <p class="hero__description">Find a variery of properties that suit you very easily, forget all difficulties in finding a residence for you.</p>
+        
+        <div class="hero__buttons">
+          <a href="#" class="button">Explore</a>
+          <a href="#" class="button button-alt">Contact Us</a>
+        </div>
+
+        <ul class="hero__numbers">
+          <li class="hero__numbers-item">
+            <h3 class="hero__numbers-title">25.356</h3>
+            <span>Projects Done</span>
+          </li>
+          <li class="hero__numbers-item">
+            <h3 class="hero__numbers-title">15.200</h3>
+            <span>Buildings Done</span>
+          </li>
+          <li class="hero__numbers-item">
+            <h3 class="hero__numbers-title">350+</h3>
+            <span>Total Employees</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__image">
+        <img src="./app/img/hero.jpg" alt="">
+      </div>
+    </div>
+  </section>
 
   <script src="./app/js/main.js"></script>
 </body>

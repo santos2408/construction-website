@@ -34,7 +34,7 @@ Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 - Em construção
 
-<!-- Link do Projeto: [Portfólio](https://rogersanttoss-portfolio.netlify.app/) -->
+Link do Projeto: [Construction - Real State](https://construction-real-state-rogersanttoss.netlify.app)
 
 <!-- <p>:heavy_check_mark: Mobile</p>
 <p>:construction: Desktop</p> -->
@@ -49,4 +49,5 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./.github/LICENS
 
 ---
 
-Desenvolvido por Roger Santos | Design de ...
+Desenvolvido por Roger Santos
+Design de @[arshakirpk](https://www.instagram.com/arshakirpk/)

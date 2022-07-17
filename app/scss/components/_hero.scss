@@ -1,0 +1,52 @@
+.hero {
+  margin-top: calc(var(--header-height) + 6rem);
+
+  .hero__container {
+    row-gap: 4rem;
+
+    .hero__title {
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-bold);
+      line-height: 4.2rem;
+      color: var(--title-color);
+      margin-bottom: 3rem;
+      
+      span {
+        color: var(--first-color);
+      }
+    }
+
+    .hero__description {
+      color: var(--text-color);
+      margin-bottom: 3rem;
+    }
+
+    .hero__buttons {
+      margin-bottom: 4rem;
+    }
+
+    .hero__numbers {
+      display: flex;
+      justify-content: space-between;
+
+      &-title {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-medium);
+        line-height: 1;
+        color: var(--title-color);
+      }
+
+      span {
+        font-size: var(--small-font-size);
+        color: var(--text-color);
+      }
+    }
+
+    .hero__image {
+      border-radius: 20px 20px 20px 200px;
+      width: 290px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  }
+}
