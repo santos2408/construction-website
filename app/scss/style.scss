@@ -1,6 +1,7 @@
 @import './config/queries';
 @import './config/variables';
 @import './config/mixins';
+@import './config/swiper-bundle.min';
 
 @import './global/base';
 @import './layout/layout';
@@ -8,3 +9,4 @@
 @import './components/header';
 @import './components/hero';
 @import './components/about';
+@import './components/company';

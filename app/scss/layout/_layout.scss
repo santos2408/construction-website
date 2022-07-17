@@ -12,13 +12,13 @@
   display: grid;
 }
 
+.main {
+  overflow: hidden;
+}
+
 .hero__buttons {
   display: flex;
   column-gap: 1rem;
-}
-
-.main {
-  overflow: hidden;
 }
 
 .button {

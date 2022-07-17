@@ -14,6 +14,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  height: 4000px;
 }
 
 ul {
@@ -30,6 +31,6 @@ button {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
