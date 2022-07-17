@@ -151,38 +151,6 @@ img {
   text-transform: uppercase;
   color: var(--first-color);
 }
-.header .nav .nav__menu {
-  visibility: none;
-  position: absolute;
-  width: calc(100% - 2.4rem);
-  top: -350px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-top: calc(var(--header-height) + 1rem);
-  padding: 2.5rem;
-  border-radius: 10px;
-  background-color: var(--white-color);
-  box-shadow: 0px 5px 10px 2px hsla(0deg, 0%, 20%, 0.085);
-  transition: 0.35s ease-out;
-}
-.header .nav .nav__menu .menu__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 2rem;
-}
-.header .nav .nav__menu .menu__list .menu__link {
-  color: var(--text-color);
-  padding: 5px;
-  transition: 0.3s;
-}
-.header .nav .nav__menu .menu__list .menu__link:hover {
-  color: var(--first-color);
-}
-.header .nav .nav__menu.show-menu {
-  visibility: visible;
-  top: 0;
-}
 .header .nav .menu__open {
   display: flex;
   flex-direction: column;
@@ -214,6 +182,40 @@ img {
   -ms-transform: translate(3px, -8px) rotate(45deg);
   -o-transform: translate(3px, -8px) rotate(45deg);
   transform: translate(3px, -8px) rotate(45deg);
+}
+@media screen and (max-width: 1023px) {
+  .header .nav__menu {
+    visibility: none;
+    position: absolute;
+    width: calc(100% - 2.4rem);
+    top: -350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: calc(var(--header-height) + 1rem);
+    padding: 2.5rem;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    box-shadow: 0px 5px 10px 2px hsla(0deg, 0%, 20%, 0.085);
+    transition: 0.35s ease-out;
+  }
+  .header .nav__menu .menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  .header .nav__menu .menu__list .menu__link {
+    color: var(--text-color);
+    padding: 5px;
+    transition: 0.3s;
+  }
+  .header .nav__menu .menu__list .menu__link:hover {
+    color: var(--first-color);
+  }
+  .header .nav__menu.show-menu {
+    visibility: visible;
+    top: 0;
+  }
 }
 
 .hero {
@@ -263,32 +265,42 @@ img {
 .about__container {
   row-gap: 6rem;
 }
-.about__container .about__data .about__title {
+.about__container .about__data {
+  grid-template-columns: 1fr;
+}
+.about__container .about__data-title {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
   line-height: 40px;
   margin-bottom: 2rem;
+  order: 1;
 }
-.about__container .about__data .about__description {
+.about__container .about__data-description {
+  order: 2;
+}
+.about__container .about__data-description p {
   color: var(--text-color);
   margin-bottom: 3rem;
 }
-.about__container .about__list {
+.about__container .about__info .about__image {
+  display: none;
+}
+.about__container .about__info .about__list {
   row-gap: 4rem;
 }
-.about__container .about__list-item {
+.about__container .about__info .about__list-item {
   position: relative;
   display: flex;
   column-gap: 3rem;
 }
-.about__container .about__list-item span {
+.about__container .about__info .about__list-item span {
   font-size: 4.8rem;
   font-weight: var(--font-semibold);
   color: var(--title-color);
   line-height: 1;
   margin-left: 2rem;
 }
-.about__container .about__list-item span::before {
+.about__container .about__info .about__list-item span::before {
   z-index: -1;
   content: "";
   position: absolute;
@@ -298,16 +310,16 @@ img {
   height: 50px;
   border-radius: 5px 25px 5px 25px;
 }
-.about__container .about__list-item .about__list-span-1::before {
+.about__container .about__info .about__list-item .about__list-span-1::before {
   background: var(--first-color);
 }
-.about__container .about__list-item .about__list-span-2::before {
+.about__container .about__info .about__list-item .about__list-span-2::before {
   background-color: var(--second-color);
 }
-.about__container .about__list-item .about__list-span-3::before {
+.about__container .about__info .about__list-item .about__list-span-3::before {
   background-color: var(--third-color);
 }
-.about__container .about__list-item p {
+.about__container .about__info .about__list-item p {
   font-size: var(--normal-font-size);
   color: var(--text-color);
 }/*# sourceMappingURL=style.min.css.map */
