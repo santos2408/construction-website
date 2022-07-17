@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -49,5 +49,5 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./.github/LICENS
 
 ---
 
-Desenvolvido por Roger Santos
-Design de @[arshakirpk](https://www.instagram.com/arshakirpk/)
+Desenvolvido por Roger Santos <br>
+Design de [arshakirpk](https://www.instagram.com/arshakirpk/)
