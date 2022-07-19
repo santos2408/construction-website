@@ -59,5 +59,5 @@ var swiperCompany = new Swiper(".company__container-cards", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-});
+  }
+})

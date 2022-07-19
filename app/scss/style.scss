@@ -3,6 +3,11 @@
 @import './config/mixins';
 @import './config/swiper-bundle.min';
 
+// @forward 'config';
+// @forward 'global';
+// @forward 'layout';
+// @forward 'components';
+
 @import './global/base';
 @import './layout/layout';
 
