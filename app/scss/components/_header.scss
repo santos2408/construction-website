@@ -1,3 +1,5 @@
+@use '../config/' as config;
+
 .header {
   position: fixed;
   top: 0;
@@ -57,17 +59,17 @@
         }
   
         .line:nth-child(1) {
-          @include transform(-45, translate(3px, 8px));
+          @include config.transform(-45, translate(3px, 8px));
         }
   
         .line:nth-child(3) {
-          @include transform(45, translate(3px, -8px));
+          @include config.transform(45, translate(3px, -8px));
         }
       }
     }
   }
 
-  @include breakpoint-down(large) {  
+  @include config.breakpoint-down(large) {  
     .nav__menu {
       visibility: none;
       position: absolute;

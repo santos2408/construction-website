@@ -1,3 +1,5 @@
+@use 'queries' as querie;
+
 :root {
   --header-height: 8rem;
 
@@ -30,7 +32,7 @@
   --z-tooltip: 10;
 }
 
-@include breakpoint-up(large) {
+@include querie.breakpoint-up(large) {
   :root {
     --h1-font-size: 7rem;
     --h2-font-size: 6.4rem;
