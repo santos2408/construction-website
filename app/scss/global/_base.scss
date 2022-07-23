@@ -27,8 +27,15 @@ a:active {
   text-decoration: none;
 }
 
+input, textarea {
+  display: block;
+  font-family: var(--body-font);
+}
+
 button {
   font-family: var(--body-font);
+  outline: none;
+  border: none;
 }
 
 img {

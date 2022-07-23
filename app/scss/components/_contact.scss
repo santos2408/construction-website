@@ -1,0 +1,35 @@
+.contact__data {
+  .contact__title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semibold);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .contact__description {
+    font-size: var(--normal-font-size);
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 4rem;
+  }
+}
+
+.contact__form-container {
+  .contact__form {
+    row-gap: 1.5rem;
+
+    input, textarea {
+      font-size: var(--normal-font-size);
+      color: #999999;
+      padding: 1.5rem 2rem;
+      background-color: #F9F9F9;
+      border-radius: 5px;
+      border: none;
+      outline-color: var(--first-color);
+    }
+  }
+
+  .contact__map {
+    display: none;
+  }
+}
