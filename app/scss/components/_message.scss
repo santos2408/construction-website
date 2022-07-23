@@ -1,0 +1,29 @@
+.message {
+  background-image: url('/app/img/message.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.message__container {
+  padding: 4rem 0;
+}
+
+.message__data {
+  .message__title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: var(--small-font-size);
+    color: var(--white-color);
+  }
+
+  & > p {
+    margin-bottom: 2rem;
+  }
+}
