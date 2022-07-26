@@ -1,3 +1,5 @@
+@use '../config/' as config;
+
 .blog__data {
   .blog__title {
     font-size: var(--h2-font-size);
@@ -26,6 +28,14 @@
     overflow: hidden;
     cursor: pointer;
 
+    @include config.breakpoint-down(smaller) {
+      width: 25rem;
+    }
+    
+    @include config.breakpoint-down(smaller) {
+      width: 22rem;
+    }
+
     img {  
       transition: .3s;
     }
@@ -34,7 +44,7 @@
       img {
         transform: scale(1.1);      
       }
-    }   
+    }
 
     &__info {
       position: absolute;
@@ -43,6 +53,10 @@
       padding: 0 2.5rem 2rem 2.5rem;
       text-align: center;
       color: var(--white-color);
+
+      @include config.breakpoint-down(smaller) {
+        padding: 0 2rem 1rem 2rem;
+      }
 
       h4 {
         font-size: var(--medium-font-size);
@@ -53,6 +67,10 @@
       p {
         font-size: var(--small-font-size);
         padding: 0 3rem;
+
+        @include config.breakpoint-down(smaller) {
+          padding: 0 1rem;
+        }
       }
     }
   }
