@@ -1,3 +1,5 @@
+@use '../config/' as config;
+
 .newsletter {
   text-align: center;
 
@@ -13,5 +15,10 @@
     font-size: var(--normal-font-size);
     color: var(--text-color);
     margin-bottom: 2rem;
+
+    @include config.breakpoint-up(medium) {
+      width: 60ch;
+      margin-inline: auto;
+    }
   }
 }

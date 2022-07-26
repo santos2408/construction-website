@@ -1,3 +1,5 @@
+@use '../config/' as config;
+
 .contact__data {
   .contact__title {
     font-size: var(--h2-font-size);
@@ -12,12 +14,18 @@
     text-align: center;
     color: var(--text-color);
     margin-bottom: 4rem;
+
+    @include config.breakpoint-up(small) {
+      width: 60ch;
+      margin-inline: auto;
+    }
   }
 }
 
 .contact__form-container {
   .contact__form {
     row-gap: 1.5rem;
+    justify-content: center;
 
     input, textarea {
       font-size: var(--normal-font-size);
@@ -27,6 +35,10 @@
       border-radius: 5px;
       border: none;
       outline-color: var(--first-color);
+
+      @include config.breakpoint-up(medium) {
+        width: 50rem;
+      }
     }
 
     textarea {

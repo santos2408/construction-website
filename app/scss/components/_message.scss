@@ -1,3 +1,5 @@
+@use '../config/' as config;
+
 .message {
   background-image: url('/app/img/message.jpg');
   background-repeat: no-repeat;
@@ -21,6 +23,10 @@
   p {
     font-size: var(--small-font-size);
     color: var(--white-color);
+
+    @include config.breakpoint-up(small) {
+      font-size: var(--normal-font-size);
+    }
   }
 
   & > p {

@@ -2,8 +2,13 @@
 
 .footer {
   .footer__container {
+    grid-template-columns: 1fr;
     row-gap: 4rem;
     margin-bottom: 4rem;
+
+    @include config.breakpoint-up(medium) {
+      grid-template-columns: 1fr 2fr;
+    }
 
     .footer__data {
       .logo {
@@ -47,6 +52,10 @@
       @include config.breakpoint-down(extrasmall) {
         column-gap: 2rem;
       }
+
+      @include config.breakpoint-up(medium) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
   
       &-title {
         display: block;
@@ -66,6 +75,10 @@
   
       .footer__nav-form {
         grid-column: 1 / -1;
+
+        @include config.breakpoint-up(medium) {
+          grid-column: initial;
+        }
   
         input {
           position: relative;

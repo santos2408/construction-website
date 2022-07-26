@@ -50,3 +50,9 @@
     --small-font-size: 2rem;
   }
 }
+
+@include querie.breakpoint-up(small) {
+  :root {
+    --h1-font-size: 5rem;
+  }
+}

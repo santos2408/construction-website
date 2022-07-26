@@ -6,32 +6,67 @@
   .about__data {
     grid-template-columns: 1fr;
 
+    @include config.breakpoint-up(medium) {
+      grid-template-columns: 1.2fr 1fr;
+      column-gap: 2rem;
+    }
+
     &-title {
       font-size: var(--h2-font-size);
       font-weight: var(--font-medium);
       line-height: 40px;
       margin-bottom: 2rem;
       order: 1;
+
+      @include config.breakpoint-up(medium) {
+        order: 2;
+      }
     }
 
     &-description {
       order: 2;
 
+      @include config.breakpoint-up(medium) {
+        order: 1;
+      }
+
       p {
         color: var(--text-color);
         margin-bottom: 3rem;
+
+        @include config.breakpoint-up(small) {
+          width: 48ch;
+        }
       }
     }
   
   }
 
   .about__info {
+    grid-template-columns: 1fr;
+
+    @include config.breakpoint-up(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+
     .about__image {
       display: none;
+      border-radius: 20px 200px 20px 20px;
+      overflow: hidden;
+      width: 350px;
+
+      @include config.breakpoint-up(medium) {
+        display: block;
+      }
     }
 
     .about__list {
       row-gap: 4rem;
+
+      @include config.breakpoint-up(medium) {
+        margin-top: 6rem;
+        row-gap: 0rem;
+      }
       
       &-item {
         position: relative;
@@ -47,7 +82,7 @@
           font-weight: var(--font-semibold);
           color: var(--title-color);
           line-height: 1;
-          margin-left: 2rem;
+          margin-left: 2rem;          
   
           &::before {
             z-index: -1;
@@ -65,6 +100,15 @@
 
             @include config.breakpoint-down(extrasmall) {
               bottom: 55px;
+            }
+
+            @include config.breakpoint-up(small) {
+              bottom: -5px;
+            }
+
+            @include config.breakpoint-up(medium) {
+              top: 18px;
+              bottom: 0;
             }
           }
         }
