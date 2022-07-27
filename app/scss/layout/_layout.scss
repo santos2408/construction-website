@@ -4,10 +4,18 @@
   max-width: 1280px;
   margin-left: 1.4rem;
   margin-right: 1.4rem;
+
+  @include config.breakpoint-up(big) {
+    margin-inline: auto;
+  }
 }
 
 .section {
   margin-bottom: 8rem;
+
+  @include config.breakpoint-up(large) {
+    margin-bottom: 14rem;
+  }
 }
 
 .grid {
@@ -30,6 +38,10 @@
 
   @include config.breakpoint-down(smaller) {
     column-gap: 1.5rem;
+  }
+
+  @include config.breakpoint-up(large) {
+    column-gap: 2rem;
   }
 }
 
@@ -55,6 +67,12 @@
 
   @include config.breakpoint-down(extrasmall) {
     width: 15rem;
+  }
+
+  @include config.breakpoint-up(large) {
+    width: 24rem;
+    height: 6.5rem;
+    border-radius: 40px 5px;
   }
 }
 

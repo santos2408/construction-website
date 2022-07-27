@@ -25,7 +25,10 @@
 .contact__form-container {
   .contact__form {
     row-gap: 1.5rem;
-    justify-content: center;
+
+    @include config.breakpoint-up(medium) {
+      justify-content: center;
+    }
 
     input, textarea {
       font-size: var(--normal-font-size);

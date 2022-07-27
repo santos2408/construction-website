@@ -15,8 +15,25 @@
 
     .nav {
       height: calc(var(--header-height) - 1.5rem);
-    }
 
+      @include config.breakpoint-up(big) {
+        height: var(--header-height);
+  
+        .menu__link {
+          font-size: 1.8rem;
+          color: var(--text-color);
+          transition: .3s;
+
+          &:hover {
+            color: var(--first-color);
+          }
+        }
+
+        .logo {
+          font-size: 2rem;
+        } 
+      }
+    }
   }
 
   .nav {
@@ -27,12 +44,21 @@
     justify-content: space-between;
     transition: .3s;
 
+    @include config.breakpoint-up(big) {
+      height: calc(var(--header-height) + 8rem);
+    }
+
     .logo {
       display: inline-block;
       font-size: 2rem;
       font-weight: var(--font-semibold);
       text-transform: uppercase;
       color: var(--first-color);
+      transition: .3s;
+
+      @include config.breakpoint-up(big) {
+        font-size: 3rem;
+      }
     }   
        
     .menu__open {
@@ -41,6 +67,10 @@
       row-gap: 5px;
       padding: 10px 0;
       cursor: pointer;
+
+      @include config.breakpoint-up(big) {
+        display: none;
+      }
       
       span {
         display: block;
@@ -71,7 +101,6 @@
 
   @include config.breakpoint-down(large) {  
     .nav__menu {
-      visibility: none;
       position: absolute;
       width: calc(100% - 2.4rem);
       top: -350px;
@@ -107,6 +136,38 @@
     .nav__menu.show-menu {
       visibility: visible;
       top: 0;
+    }
+  }
+
+  @include config.breakpoint-up(big) {
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 6rem;
+
+      .menu__link {
+        position: relative;
+        color: var(--white-color);
+        font-weight: var(--font-normal);
+
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 2px;
+          bottom: -4px;
+          background-color: var(--white-color);
+          border-radius: 5px;
+          transition: .3s;
+        }
+
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

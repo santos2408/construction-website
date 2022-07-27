@@ -24,6 +24,7 @@
   --normal-font-size: 1.4rem;
   --small-font-size: 1.2rem;
 
+  --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
@@ -38,6 +39,12 @@
   }
 }
 
+@include querie.breakpoint-up(small) {
+  :root {
+    --h1-font-size: 5rem;
+  }
+}
+
 @include querie.breakpoint-up(large) {
   :root {
     --h1-font-size: 7rem;
@@ -48,11 +55,5 @@
     --medium-font-size: 3.2rem;
     --normal-font-size: 2rem;
     --small-font-size: 2rem;
-  }
-}
-
-@include querie.breakpoint-up(small) {
-  :root {
-    --h1-font-size: 5rem;
   }
 }

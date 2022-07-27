@@ -6,9 +6,15 @@
   .about__data {
     grid-template-columns: 1fr;
 
-    @include config.breakpoint-up(medium) {
+    @include config.breakpoint-up(small) {
       grid-template-columns: 1.2fr 1fr;
       column-gap: 2rem;
+    }
+
+    @include config.breakpoint-up(big) {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      column-gap: 0rem;
     }
 
     &-title {
@@ -17,16 +23,31 @@
       line-height: 40px;
       margin-bottom: 2rem;
       order: 1;
+      width: 15ch;
+
+      @include config.breakpoint-down(small) {
+        line-height: 35px;
+        width: auto;
+      }
+
+      @include config.breakpoint-up(small) {
+        order: 2;
+      }
 
       @include config.breakpoint-up(medium) {
-        order: 2;
+        justify-self: center;
+      }
+
+      @include config.breakpoint-up(large) {
+        width: auto;
+        line-height: 76px;
       }
     }
 
     &-description {
       order: 2;
 
-      @include config.breakpoint-up(medium) {
+      @include config.breakpoint-up(small) {
         order: 1;
       }
 
@@ -34,7 +55,15 @@
         color: var(--text-color);
         margin-bottom: 3rem;
 
-        @include config.breakpoint-up(small) {
+        @include config.breakpoint-up(medium) {
+          width: 48ch;
+        }
+
+        @include config.breakpoint-up(large) {
+          width: auto;
+        }
+
+        @include config.breakpoint-up(big) {
           width: 48ch;
         }
       }

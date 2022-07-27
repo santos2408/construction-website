@@ -3,8 +3,17 @@
 .hero {
   margin-top: calc(var(--header-height) + 6rem);
 
+  @include config.breakpoint-up(large) {
+    margin-top: calc(var(--header-height) + 10rem);
+  }
+
   .hero__container {
+    position: relative;
     row-gap: 4rem;
+
+    @include config.breakpoint-up(big) {
+      row-gap: 13rem;
+    }
 
     .hero__title {
       font-size: var(--h1-font-size);
@@ -12,10 +21,19 @@
       line-height: 4.2rem;
       color: var(--title-color);
       margin-bottom: 3rem;
+      width: 15ch;
+
+      @include config.breakpoint-down(small) {
+        width: auto;
+      }
 
       @include config.breakpoint-up(small) {
-        width: 15ch;
         line-height: 5.5rem;
+      }
+
+      @include config.breakpoint-up(large) {
+        line-height: 8.4rem;
+        margin-bottom: 4rem;
       }
       
       span {
@@ -34,26 +52,26 @@
 
     .hero__buttons {
       margin-bottom: 4rem;
+
+      @include config.breakpoint-up(large) {
+        margin-bottom: 8rem;
+      }
     }
 
     .hero__numbers {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
 
       @include config.breakpoint-down(smaller) {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         row-gap: 2rem;
       }
 
-      @include config.breakpoint-up(small) {
+      @include config.breakpoint-up(big) {
         display: flex;
-        justify-content: space-evenly;
-      }
-
-      @include config.breakpoint-up(medium) {
-        justify-content: space-evenly;
+        column-gap: 6rem;
       }
 
       &-title {
@@ -70,26 +88,35 @@
     }
 
     .hero__sponsor-container {
-      @include config.breakpoint-up(small) {
+      display: none;
+
+      @include config.breakpoint-up(big) {
         display: grid;
+        grid-template-columns: 1fr;
         justify-items: center;
-        column-gap: 2rem;
-        grid-template-columns: 1fr 1fr;
-        padding: 0 2rem;
+      }
+
+      @include config.breakpoint-up(large) {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
       }
 
       .hero__sponsor {
         display: none;
-        order: 2;
-  
-        @include config.breakpoint-up(small) {
+        
+        @include config.breakpoint-up(big) {
           display: flex;
-          padding: 3rem 2rem;
+          justify-content: center;
+          align-items: center;
+          order: 2;
+          width: 100%;
+          height: 20rem;
+          background-color: hsla(0, 0%, 0%, 0.02);
           border-radius: 100px;
   
           ul {
             display: flex;
-            flex-direction: column;
+            column-gap: 11rem;
             justify-content: center;
             row-gap: 4rem;
           }
@@ -97,21 +124,13 @@
       }
   
       .hero__image {
-        border-radius: 20px 20px 20px 200px;
-        width: 290px;
-        margin: 0 auto;
-        overflow: hidden;
-  
-        @include config.breakpoint-down(smaller) {
-          width: 280px;
-        }
-  
-        @include config.breakpoint-down(extrasmall) {
-          width: 240px;
-        }
-
-        @include config.breakpoint-up(small) {
-          order: 1;
+        @include config.breakpoint-up(big) {
+          border-radius: 20px 20px 20px 200px;
+          position: absolute;
+          top: -150px;
+          right: -80px;
+          border-radius: 20px 20px 20px 300px;
+          overflow: hidden;
         }
       }
     }
