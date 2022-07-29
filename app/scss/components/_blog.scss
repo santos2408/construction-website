@@ -19,6 +19,10 @@
       width: 60ch;
       margin-inline: auto;
     }
+
+    @include config.breakpoint-up(big) {
+      margin-bottom: 8rem;
+    }
   }
 }
 
@@ -27,30 +31,24 @@
   grid-template-columns: 1fr;
   justify-items: center;
 
-  @include config.breakpoint-up(medium) {
+  @include config.breakpoint-up(small) {
     grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
   }
 
   .post {
     position: relative;
-    width: 30rem;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
 
-    @include config.breakpoint-down(smaller) {
-      width: 25rem;
-    }
-    
-    @include config.breakpoint-down(smaller) {
-      width: 22rem;
+    @include config.breakpoint-up(small) {
+      width: 100%;
     }
 
-    @include config.breakpoint-up(medium) {
-      width: 35rem;
-    }
-
-    img {  
+    img {
+      width: 100%;
       transition: .3s;
     }
 
@@ -62,6 +60,7 @@
 
     &__info {
       position: absolute;
+      width: 100%;
       bottom: 0;
 
       padding: 0 2.5rem 2rem 2.5rem;
@@ -70,6 +69,10 @@
 
       @include config.breakpoint-down(smaller) {
         padding: 0 2rem 1rem 2rem;
+      }
+
+      @include config.breakpoint-up(big) {
+        padding: 0 2rem 6rem 2rem;
       }
 
       h4 {

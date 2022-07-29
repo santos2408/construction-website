@@ -46,18 +46,3 @@ window.addEventListener('scroll', () => {
 window.addEventListener('click', handleMenuListClick)
 menuList.addEventListener('click', handleMenuListClick)
 menuToggle.addEventListener('click', showMenu)
-
-// ============ SWIPER JS ============
-
-var swiperCompany = new Swiper(".company__container-cards", {
-  spaceBetween: 20,
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  }
-})

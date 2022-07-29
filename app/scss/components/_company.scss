@@ -29,22 +29,34 @@
   }
 
   &-cards {
-    height: 395px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    @include config.breakpoint-up(big) {
+      gap: 6rem;
+    }
   
     .company__card {
       width: 260px;
       height: 295px;
       padding: 1.5rem 1.5rem 0 1.5rem;
-      margin-inline: auto;
       transition: .4s;
       
       background-color: var(--white-color);
       border-radius: 1rem;
-      box-shadow: 0 12px 15px hsla(0, 0%, 0%, .03);
+      box-shadow: 0 12px 15px hsla(0, 0%, 0%, .05);
       text-align: center;
 
       @include config.breakpoint-down(small) {
-        width: 180px;
+        width: 220px;
+      }
+
+      @include config.breakpoint-up(large) {
+        width: 380px;
+        height: 440px;
+        padding: 2.5rem;
       }
   
       .company__top {
@@ -53,6 +65,10 @@
         justify-content: space-between;
         font-size: 2.4rem;
         margin-bottom: 2rem;
+
+        @include config.breakpoint-up(large) {
+          font-size: 3rem;
+        }
   
         .star { color: hsl(45, 90%, 65%); }
         .dots {
@@ -64,10 +80,20 @@
       .company__center {
         margin-bottom: 2rem;
 
+        @include config.breakpoint-up(large) {
+          margin-bottom: 4rem;
+        }
+
         img {
           width: 80px;
           height: 80px;
           margin-inline: auto;
+
+          @include config.breakpoint-up(large) {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1rem;
+          }
         }
   
         h4 {
@@ -95,36 +121,36 @@
   }
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: '';
-}
+// .swiper-button-next::after,
+// .swiper-button-prev::after {
+//   content: '';
+// }
 
-.swiper-button-next,
-.swiper-button-prev {
-  top: initial;
-  bottom: 0;
-  width: initial;
-  height: initial;
+// .swiper-button-next,
+// .swiper-button-prev {
+//   top: initial;
+//   bottom: 0;
+//   width: initial;
+//   height: initial;
   
-  padding: 5px;
-  border-radius: 10rem;
-  font-size: 3.2rem;
-  color: var(--text-color);
-  background-color: hsl(0, 0%, 96%);
-  transition: .3s;
+//   padding: 5px;
+//   border-radius: 10rem;
+//   font-size: 3.2rem;
+//   color: var(--text-color);
+//   background-color: hsl(0, 0%, 96%);
+//   transition: .3s;
 
-  &:hover {
-    color: var(--white-color);
-    background-color: var(--first-color);
-  }
+//   &:hover {
+//     color: var(--white-color);
+//     background-color: var(--first-color);
+//   }
 
-}
+// }
 
-.swiper-button-next {
-  right: calc(50% - 4.7rem);
-}
+// .swiper-button-next {
+//   right: calc(50% - 4.7rem);
+// }
 
-.swiper-button-prev {
-  left: calc(50% - 4.7rem);
-}
+// .swiper-button-prev {
+//   left: calc(50% - 4.7rem);
+// }

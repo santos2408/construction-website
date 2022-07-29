@@ -19,15 +19,28 @@
       width: 60ch;
       margin-inline: auto;
     }
+
+    @include config.breakpoint-up(big) {
+      margin-bottom: 8rem;
+    }
   }
 }
 
 .contact__form-container {
+  @include config.breakpoint-up(big) {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 6rem;
+  }
+
   .contact__form {
     row-gap: 1.5rem;
 
     @include config.breakpoint-up(medium) {
       justify-content: center;
+    }
+
+    @include config.breakpoint-up(big) {
+      justify-content: start;
     }
 
     input, textarea {
@@ -42,18 +55,37 @@
       @include config.breakpoint-up(medium) {
         width: 50rem;
       }
+
+      @include config.breakpoint-up(big) {
+        font-size: 1.8rem;
+        padding: 1.8rem 2.3rem;
+      }
     }
 
     textarea {
       height: 12rem;
+      resize: none;
+
+      @include config.breakpoint-up(big) {
+        height: 22rem;
+      }
     }
 
     .button-form {
+      font-size: var(--normal-font-size);
       width: 15rem;
+
+      @include config.breakpoint-up(medium) {
+        width: 25rem;
+      }
     }
   }
 
   .contact__map {
     display: none;
+
+    @include config.breakpoint-up(big) {
+      display: block;
+    }
   }
 }
