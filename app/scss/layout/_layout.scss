@@ -11,7 +11,7 @@
 }
 
 .section {
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 
   @include config.breakpoint-up(large) {
     margin-bottom: 14rem;
@@ -70,8 +70,8 @@
   }
 
   @include config.breakpoint-up(large) {
-    width: 24rem;
-    height: 6.5rem;
+    width: 20rem;
+    height: 6rem;
     border-radius: 40px 5px;
   }
 }

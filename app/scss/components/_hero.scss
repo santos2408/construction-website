@@ -4,7 +4,7 @@
   margin-top: calc(var(--header-height) + 6rem);
 
   @include config.breakpoint-up(large) {
-    margin-top: calc(var(--header-height) + 10rem);
+    margin-top: calc(var(--header-height) + 15rem);
   }
 
   .hero__container {
@@ -43,10 +43,14 @@
 
     .hero__description {
       color: var(--text-color);
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       @include config.breakpoint-up(small) {
         width: 50ch;
+      }
+
+      @include config.breakpoint-up(large) {
+        margin-bottom: 4rem;
       }
     }
 
@@ -79,6 +83,7 @@
         font-weight: var(--font-medium);
         line-height: 1;
         color: var(--title-color);
+        margin-bottom: 5px;
       }
 
       span {
@@ -127,8 +132,9 @@
         @include config.breakpoint-up(big) {
           border-radius: 20px 20px 20px 200px;
           position: absolute;
-          top: -150px;
-          right: -80px;
+          width: 580px;
+          top: -200px;
+          right: -60px;
           border-radius: 20px 20px 20px 300px;
           overflow: hidden;
         }

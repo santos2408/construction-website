@@ -67,8 +67,7 @@
           width: 48ch;
         }
       }
-    }
-  
+    }  
   }
 
   .about__info {
@@ -108,71 +107,33 @@
       &-item {
         position: relative;
         display: flex;
-        column-gap: 3rem;
+        align-items: center;
+        column-gap: 2rem;
 
         @include config.breakpoint-down(smaller) {
           column-gap: 1.5rem;
         }
 
         @include config.breakpoint-up(big) {
+          // align-items: flex-end;
           column-gap: 6rem;
         }
-  
-        span {
-          font-size: 4.8rem;
-          font-weight: var(--font-semibold);
-          color: var(--title-color);
-          line-height: 1;
-          margin-left: 2rem;  
-          
-          @include config.breakpoint-up(big) {
-            font-size: 8rem;
-          }
-  
-          &::before {
-            z-index: -1;
-            content: '';
-            position: absolute;
-            bottom: 15px;
-            left: 0;
-            width: 50px;
-            height: 50px;
-            border-radius: 5px 25px 5px 25px;
 
-            @include config.breakpoint-down(small) {
-              bottom: 35px;
-            }
+        img {
+          width: 9rem;
 
-            @include config.breakpoint-down(extrasmall) {
-              bottom: 55px;
-            }
-
-            @include config.breakpoint-up(small) {
-              bottom: -5px;
-            }
-
-            @include config.breakpoint-up(medium) {
-              top: 18px;
-              bottom: 0;
-            }
-
-            @include config.breakpoint-up(big) {
-              top: 25px;
-              left: -30px;
-              width: 90px;
-              height: 90px;
-              border-radius: 5px 50px 5px 50px;
-            }
+          @include config.breakpoint-up(large) {
+            width: initial;
           }
         }
-  
-        .about__list-span-1::before { background: var(--first-color); }
-        .about__list-span-2::before { background-color: var(--second-color); }
-        .about__list-span-3::before { background-color: var(--third-color); }
-  
+
         p {
           font-size: var(--normal-font-size);
           color: var(--text-color);
+
+          @include config.breakpoint-up(big) {
+            font-size: 2rem;
+          }
         }
       }
     }

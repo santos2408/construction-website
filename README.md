@@ -32,8 +32,6 @@ Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 ## 🚧 Projeto:
 
-- Em construção
-
 Link do Projeto: [Construction - Real State](https://construction-real-state-rogersanttoss.netlify.app)
 
 <!-- <p>:heavy_check_mark: Mobile</p>

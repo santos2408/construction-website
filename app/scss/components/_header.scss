@@ -20,7 +20,7 @@
         height: var(--header-height);
   
         .menu__link {
-          font-size: 1.8rem;
+          font-size: var(--normal-font-size);
           color: var(--text-color);
           transition: .3s;
 
@@ -147,8 +147,9 @@
 
       .menu__link {
         position: relative;
-        color: var(--white-color);
+        font-size: var(--normal-font-size);
         font-weight: var(--font-normal);
+        color: var(--white-color);
 
         &::after {
           content: '';
