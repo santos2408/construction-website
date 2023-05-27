@@ -32,17 +32,58 @@ const showMenu = () => {
   }
 }
 
-window.addEventListener('scroll', () => {
+const handleWindorScroll = () => {
   if (window.scrollY >= 40) {
     header.classList.add('header-scroll')
     menu.classList.remove('show-menu')
     menuToggle.classList.remove('active')
     return
   }
-
   header.classList.remove('header-scroll')
-})
+}
 
+const handleWindowSize = () => {
+  const swiperNavigationContainer = document.querySelector('[data-js="swiper-navigation-buttons"]')
+  const screenWidth = window.innerWidth
+
+  if (screenWidth >= 760) {
+    swiperNavigationContainer.classList.add('swiper-navigation-buttons_hidden')
+    return
+  }
+
+  swiperNavigationContainer.classList.remove('swiper-navigation-buttons_hidden')
+}
+
+handleWindowSize()
+
+const swiper = new Swiper('.swiper', {
+  speed: 400,
+  centeredSlides: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: false,
+    },
+
+    760: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      centeredSlides: false,
+    }
+  },
+});
+
+window.addEventListener('scroll', handleWindorScroll)
 window.addEventListener('click', handleMenuListClick)
+window.addEventListener("resize", handleWindowSize)
 menuList.addEventListener('click', handleMenuListClick)
 menuToggle.addEventListener('click', showMenu)

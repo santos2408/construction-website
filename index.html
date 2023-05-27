@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
   <!-- BOX-ICONS -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,10 +25,10 @@
 
       <div class="nav__menu" data-js="nav-menu">
         <ul class="menu__list" data-js="menu-list">
-          <li><a href="#" class="menu__link">Home</a></li>
-          <li><a href="#about" class="menu__link">About Us</a></li>
-          <li><a href="#service" class="menu__link">Services</a></li>
-          <li><a href="#contact" class="menu__link">Contact</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item"><a href="#about" class="menu__link">About Us</a></li>
+          <li class="menu__item"><a href="#service" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
         </ul>
       </div>
   
@@ -139,55 +140,65 @@
           <p class="company__description">It's a long established fact that a reader will be distracted by the readable content of a page when looking at its layout look like readable.</p>
         </div>
 
-        <div class="company__container-cards container">
-          <article class="company__card">
-            <div class="company__top">
-              <i class='bx bxs-star star'></i>
-              <i class='bx bx-dots-vertical-rounded dots' ></i>
-            </div>
-            <div class="company__center">
-              <img src="./app/img/profile-1.jpg" alt="Alison Kiara">
-              <h4>Alison Kiara</h4>
-              <span>Rio de Janeiro, RJ</span>
-            </div>
-            <div class="company__bottom">
-              <!-- <span>989-653-2986</span>
-              <span>alisonkiara@const.com</span> -->
-            </div>
-          </article>
-
-          <article class="company__card">
-            <div class="company__top">
-              <i class='bx bxs-star star'></i>
-              <i class='bx bx-dots-vertical-rounded dots' ></i>
-            </div>
-            <div class="company__center">
-              <img src="./app/img/profile-2.jpg" alt="Adam Gates">
-              <h4>Alisan Kiara</h4>
-              <span>Belo Horizonte, MG</span>
-            </div>
-            <div class="company__bottom">
-              <!-- <span>989-653-2986</span>
-              <span>adamgates@const.com</span> -->
-            </div>
-          </article>
-
-          <article class="company__card">
-            <div class="company__top">
-              <i class='bx bxs-star star'></i>
-              <i class='bx bx-dots-vertical-rounded dots' ></i>
-            </div>
-            <div class="company__center">
-              <img src="./app/img/profile-3.jpg" alt="Elie Grace">
-              <h4>Elie Grace</h4>
-              <span>Rio de Janeiro, RJ</span>
-            </div>
-            <div class="company__bottom">
-              <!-- <span>989-653-2986</span>
-              <span>eliegrace@const.com</span> -->
-            </div>
-          </article>
-        </div>        
+        <div class="swiper company__container-cards container">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide custom-swiper-slide">
+              <div class="swiper-card company__card">
+                <div class="company__top">
+                  <i class='bx bxs-star star'></i>
+                  <i class='bx bx-dots-vertical-rounded dots' ></i>
+                </div>
+                <div class="company__center">
+                  <img src="./app/img/profile-1.jpg" alt="Alison Kiara">
+                  <h4>Alison Kiara</h4>
+                  <span>Rio de Janeiro, RJ</span>
+                </div>
+                <div class="company__bottom">
+                  <span>989-653-2986</span>
+                  <span>alisonkiara@const.com</span>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide custom-swiper-slide">
+              <div class="swiper-card company__card">
+                <div class="company__top">
+                  <i class='bx bxs-star star'></i>
+                  <i class='bx bx-dots-vertical-rounded dots' ></i>
+                </div>
+                <div class="company__center">
+                  <img src="./app/img/profile-2.jpg" alt="Adam Gates">
+                  <h4>Alisan Kiara</h4>
+                  <span>Belo Horizonte, MG</span>
+                </div>
+                <div class="company__bottom">
+                  <span>989-653-2986</span>
+                  <span>adamgates@const.com</span>
+                </div>
+              </div>
+            </article>
+            <article class="swiper-slide custom-swiper-slide">
+              <div class="swiper-card company__card">
+                <div class="company__top">
+                  <i class='bx bxs-star star'></i>
+                  <i class='bx bx-dots-vertical-rounded dots' ></i>
+                </div>
+                <div class="company__center">
+                  <img src="./app/img/profile-3.jpg" alt="Elie Grace">
+                  <h4>Elie Grace</h4>
+                  <span>Rio de Janeiro, RJ</span>
+                </div>
+                <div class="company__bottom">
+                  <span>989-653-2986</span>
+                  <span>eliegrace@const.com</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-navigation-buttons" data-js="swiper-navigation-buttons">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -307,7 +318,7 @@
     
   </main>
   <!-- SWIPER JS -->
-  <script src="./app/js/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <!-- MAIN JS -->
   <script src="./app/js/main.js"></script>
 </body>
